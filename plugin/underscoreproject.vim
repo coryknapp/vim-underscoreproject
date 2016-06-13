@@ -15,5 +15,5 @@ function! SourceUnderscoreProjectFile()
 endfunction
 
 augroup underscoreprojectgroup
-    autocmd BufNewFile,BufRead * :call SourceUnderscoreProjectFile
+    autocmd BufNewFile,BufRead * :call SourceUnderscoreProjectFile()
 augroup END
