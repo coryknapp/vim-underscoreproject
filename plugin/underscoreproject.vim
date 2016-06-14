@@ -10,7 +10,7 @@ let s:script_path = expand('<sfile>:p:h').'/underscoreproject.py'
 function! SourceUnderscoreProjectFile()
 	let s:output = system('python '.s:script_path.' '.expand('%:p'))
 	if(len(s:output)>0)
-		source expand(s:output)	
+		execute 'source '.fnameescape(s:output)
 	endif
 endfunction
 
