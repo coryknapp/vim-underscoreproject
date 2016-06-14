@@ -1,5 +1,5 @@
 if exists('g:loaded_underscoreproject') || v:version < 700|| &cp
-  finish
+"  finish
 endif
 let g:loaded_underscoreproject = 1
 
@@ -15,5 +15,6 @@ function! SourceUnderscoreProjectFile()
 endfunction
 
 augroup underscoreprojectgroup
-    autocmd BufNewFile,BufRead * :call SourceUnderscoreProjectFile()
+    autocmd!
+	autocmd BufNewFile,BufRead * :call SourceUnderscoreProjectFile()
 augroup END
